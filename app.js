@@ -1,6 +1,7 @@
 // third party libs
 const express = require('express')
 const app = express()
+const port = precess.env.PORT || 3000
 
 // node libs
 const fs = require('fs')
@@ -102,7 +103,7 @@ app.get('/:id/update', (req, res) => {
 })
 
 
-app.listen(3000)
+
 
 function id () {
     return '_' + Math.random().toString(36).substr(2, 9);
