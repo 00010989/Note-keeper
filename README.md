@@ -6,7 +6,7 @@ The note keeper is designed for your everyday convenience. With it help, you wil
 1.Download the source code
 
 ```js
-git clone [url to the github repo]
+git clone https://github.com/00010989/Note-keeper.git
 ```
 
 or just download the *.zip file 
@@ -26,4 +26,4 @@ node app
 - pug
 
 #### Link to github repo
-[url to the github repo]
+https://github.com/00010989/Note-keeper.git
