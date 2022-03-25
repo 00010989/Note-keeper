@@ -1,0 +1,28 @@
+extends layout.pug 
+
+block home 
+    if error 
+        p.warning Please create your first note
+
+    if success 
+        p.success Your note is created, great!
+
+    if deleted
+        p.deleted Selected note was successfully deleted!
+        
+    form.form(action='/add' method='POST')
+        textarea.input(type='text' placeholder='Please type your note here' name="keeper", cols="30", rows="10")
+        button.btn Save my note
+
+    div.keepers
+        if keepers.length
+            each keeper in keepers
+                p.keeper 
+                    if keeper.done
+                        a.done(href=`/${ keeper.id}/update`) #{ keeper.description }
+                    else
+                        a.undone(href=`/${ keeper.id}/update`) #{ keeper.description }
+                    a.delete(href=`/${ keeper.id }/delete`) Delete this note
+        else
+            p.keeper.hint No any notes available
+        
